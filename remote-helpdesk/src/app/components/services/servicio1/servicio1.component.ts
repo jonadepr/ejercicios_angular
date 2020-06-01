@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Servicio} from 'src/app/models/services/servicio';
+import {Proveedor} from 'src/app/models/services/proveedor';
 
 @Component({
   selector: 'app-servicio1',
@@ -12,11 +13,16 @@ export class Servicio1Component implements OnInit {
 
   public servicio: Servicio;
   public unidades: number;
+
+  public proveedor: Proveedor;
   constructor() { }
 
   ngOnInit(): void {
     this.servicio = new Servicio('Instalación de antivirus', 29.99, 'https://www.adslzone.net/app/uploads/2018/10/antivirus-pc.jpg', true);
-    this.unidades = 1;
+    this.unidades = 0;
+
+    this.proveedor = new Proveedor('Luis', 'López Vázquez', '23456652P', 'https://img2.freepng.es/20180325/bgw/kisspng-female-clip-art-avatar-5ab751aeeeb9b0.3078693815219634389778.jpg', 10);
+
   }
 
   sumar() {
