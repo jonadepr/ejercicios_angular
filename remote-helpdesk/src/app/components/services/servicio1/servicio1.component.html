@@ -1,0 +1,16 @@
+<div class="servicio-item">
+  <div class="nombre">{{servicio.nombre}}</div>
+  <div class="precio">{{servicio.precio}}</div>
+  <div>
+    <img  [class]="servicio.novedad?'imagen-novedad':'imagen'" [src]="servicio.imagen">
+  </div>
+  <div>Cantidad: {{unidades}}</div>
+  <div>
+    <button (click)="sumar()">
+      +
+    </button>
+    <button (click)="restar()" [disabled]="unidades===0">
+      -
+    </button>
+  </div>
+</div>
