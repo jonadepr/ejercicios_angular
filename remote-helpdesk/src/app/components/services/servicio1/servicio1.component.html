@@ -2,11 +2,11 @@
   <div class="nombre">{{servicio.nombre}}</div>
   <div class="precio">{{servicio.precio}}</div>
   <div>
-    <img [class]="servicio.novedad?'imagen-novedad':'imagen'" [src]="servicio.imagen">
+    <img [ngClass]="this.classes" [src]="servicio.imagen">
   </div>
   <div>Cantidad: {{unidades}}</div>
   <div>
-    <button (click)="restar()" [disabled]="unidades===0">
+    <button (click)="restar()" *ngIf="unidades>0">
       -
     </button>
     <button (click)="sumar()">
@@ -24,7 +24,10 @@
   <div class="foto-pro">
     <img class="foto" [src]="proveedor.foto">
   </div>
-  <div class="valoracion-pro">Valoración: {{proveedor.valoracion}}</div>
-
-
+  <div>Valoración: {{proveedor.valoracion}}</div>
+  <div class="valoracion-pro">
+    <select name="cars" id="cars">
+      <option *ngFor="let a of array; index as i">{{array[i]}}</option>
+    </select>
+  </div>
 </div>
