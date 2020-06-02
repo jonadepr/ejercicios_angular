@@ -7,12 +7,13 @@
   </div>
   <div>Cantidad: {{unidades}}</div>
   <div>
-    <button (click)="sumar()">
-      +
-    </button>
     <button (click)="restar()" [disabled]="unidades===0">
       -
     </button>
+    <button (click)="sumar()">
+      +
+    </button>
+
   </div>
 </div>
 
