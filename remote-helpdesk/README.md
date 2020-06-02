@@ -1,27 +1,56 @@
 # RemoteHelpdesk
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
+# Básicos angular CLI
 
-## Development server
+### Instalación de CLI:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```
+npm i -g @angular/cli
+```
 
-## Code scaffolding
+### Nueva aplicación:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```
+ng new stock-market
+```
+Esta aplicación la hemos generado sin Router y con CSS
 
-## Build
+### Arrancar la aplicación:
+```
+ng serve --open
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Generar componente: 
+```
+ng generate component components/stock/stock-item
+```
 
-## Running unit tests
+### Generar modelo:
+```
+ng generate class models/stock/stock
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+# Ejercicio 1
 
-## Further help
+1. Comenzar el proyecto con ng new remote-helpdesk
+2. Creamos un componente para mostrar un servicio
+3. El componente tendrá que mostrar:
+    - Nombre del servicio
+    - Precio
+    - Imagen
+4. Mostraremos el producto de una forma más destacada si el producto
+es una novedad. 
+5. Que sea novedad será un atributo del servicio. (esto es , de su clase)
+6. Añadir botones de + y - para cambiar la cantidad del producto. El botón de menos estará desabilitado cuando la cantidad es "0"
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+# Ejercicio 1 plus
+
+7. Crear un proveedor del servicio
+8. El proveedor del servicio tendrá los campos de:
+  - nombre
+  - apellidos
+  - nif
+  - foto
+  - valoración
