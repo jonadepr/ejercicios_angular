@@ -1,0 +1,33 @@
+<div class="servicio-item">
+  <div class="nombre">{{servicio.nombre}}</div>
+  <div class="precio">{{servicio.precio}}</div>
+  <div>
+    <img [ngClass]="this.classes" [src]="servicio.imagen">
+  </div>
+  <div>Cantidad: {{unidades}}</div>
+  <div>
+    <button (click)="restar()" *ngIf="unidades>0">
+      -
+    </button>
+    <button (click)="sumar()">
+      +
+    </button>
+
+  </div>
+</div>
+
+<h3>Proveedor que realizará el servicio</h3>
+<div class="item-proveedor">
+  <div class="nombre-pro">{{proveedor.nombre}}</div>
+  <div class="apellidos-pro">{{proveedor.apellidos}}</div>
+  <div class="nif">{{proveedor.nif}}</div>
+  <div class="foto-pro">
+    <img class="foto" [src]="proveedor.foto">
+  </div>
+  <div>Valoración actual: {{proveedor.valoracion}}</div>
+  <div class="valoracion-pro">
+    <select name="valoracion" id="valoracion">
+      <option *ngFor="let a of array; index as i" [value]="array[i]">{{array[i]}}</option>
+    </select>
+  </div>
+</div>

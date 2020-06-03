@@ -1,0 +1,28 @@
+.imagen{
+  width: 150px;
+  height: 100px;
+}
+
+
+.foto{
+  width: 150px;
+  height: 100px;
+}
+.imagennovedad{
+  width: 150px;
+  height: 100px;
+  animation: blink 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+  0% {
+      opacity: 1;
+  }
+  50% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
