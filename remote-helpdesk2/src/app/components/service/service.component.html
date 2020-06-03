@@ -2,12 +2,12 @@
   <div class="card-content white-text">
     <span class="card-title">{{service.name}}</span>
     <div>{{service.price}}</div>
-    <img [src]="service.image">
+    <img class="imagen" [src]="service.image">
     <div>
-      <button (click)="service.novelty = !service.novelty">Set Oferta</button>
+<!--       <button (click)="service.novelty = !service.novelty">Set Oferta</button>
         <input  id="first_name" type="text" class="browser-default"
           [value] = "contenido" (input)="contenido = $event.target.value">
-          {{contenido}}
+          {{contenido}} -->
       <select class="browser-default" [value]="quantity"
         (input)="setQuantity($event)">
         <option *ngFor="let i of createArrayTo(10);" [value]="i">

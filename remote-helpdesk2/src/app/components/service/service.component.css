@@ -1,3 +1,7 @@
 .quantity {
   margin: 0px 5px 0px 5px;
 }
+
+.imagen{
+  max-width: 150px;
+}

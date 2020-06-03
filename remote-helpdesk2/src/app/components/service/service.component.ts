@@ -1,4 +1,4 @@
-import { Component, OnInit, DoCheck } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import Service from 'src/app/model/service';
 
 @Component({
@@ -6,11 +6,13 @@ import Service from 'src/app/model/service';
   templateUrl: './service.component.html',
   styleUrls: ['./service.component.css']
 })
+
+
 export class ServiceComponent implements OnInit {
 
-  public service: Service;
+  @Input() public service: Service;
   public quantity = 0;
-  public cardClass: any;
+  // public cardClass: any;
   public contenido = "";
 
   constructor() { }
@@ -19,7 +21,7 @@ export class ServiceComponent implements OnInit {
     this.quantity += value;
   }
 
-  setContenido(c){
+  setContenido(c: string){
     console.log(c);
     this.contenido = c.toUpperCase();
   }
@@ -32,17 +34,12 @@ export class ServiceComponent implements OnInit {
     return result;
   }
 
-  setQuantity(e): void {
+  setQuantity(e: { target: { value: string; }; }): void {
     console.log(e);
     this.quantity = parseInt(e.target.value);
   }
 
   ngOnInit(): void {
-    this.service = new Service(
-      'Instalacion Antivirus',
-      69.99,
-      'assets/img/antivirus.jpg',
-      false);
   }
 
 
