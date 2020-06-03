@@ -27,7 +27,7 @@
   <div>Valoración actual: {{proveedor.valoracion}}</div>
   <div class="valoracion-pro">
     <select name="valoracion" id="valoracion">
-      <option *ngFor="let a of array; index as i">{{array[i]}}</option>
+      <option *ngFor="let a of array; index as i" [value]="array[i]">{{array[i]}}</option>
     </select>
   </div>
 </div>
