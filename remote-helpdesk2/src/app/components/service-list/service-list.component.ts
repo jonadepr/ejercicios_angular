@@ -10,6 +10,10 @@ import Service from 'src/app/model/service';
 export class ServiceListComponent implements OnInit {
 
   public services: Service[];
+  public pedido: [{
+    serviceid: string,
+    quantity: number
+  }];
 
   constructor() { }
 
