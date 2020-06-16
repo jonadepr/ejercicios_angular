@@ -47,6 +47,7 @@ const patientController = {
     },
 
     getUpdate: (req, res) => {
+        console.log(req.body);
         Suppliers.findByIdAndUpdate({ _id: req.params.id }, req.body, { new: true }, (err, suppliers) =>
             err ? res.status(500).send("error") : res.status(200).jsonp(suppliers)
         )
