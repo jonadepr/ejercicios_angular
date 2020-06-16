@@ -4,7 +4,7 @@ const patientController = {
 
 
     getSuppliers: (req, res) => {
-        console.log(res); 
+        // console.log(res); 
         Suppliers.find(
             (err, suppliers) => {
                 return err ? res.status(500).send(err) : res.status(200).jsonp(suppliers)
@@ -14,7 +14,7 @@ const patientController = {
 
 
     createSuppliers: (req, res) => { // lo cogemos del body el nuevo supplier
-        console.log(req.body);
+        // console.log(req.body);
         const suplier = new Suppliers();
         const { body } = req;
         suplier.nombre = body.nombre;
@@ -47,7 +47,7 @@ const patientController = {
     },
 
     getUpdate: (req, res) => {
-        console.log(req.body);
+        // console.log(req.body);
         Suppliers.findByIdAndUpdate({ _id: req.params.id }, req.body, { new: true }, (err, suppliers) =>
             err ? res.status(500).send("error") : res.status(200).jsonp(suppliers)
         )
