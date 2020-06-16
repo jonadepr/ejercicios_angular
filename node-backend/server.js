@@ -2,8 +2,9 @@
 const mongoose = require("mongoose");  // mongoose para mongodb
 const express = require("express");    // Utilizamos express
 const app = express();
+const SuppliersRoutes = require("./server/routes/Suppliers");
 
-
+app.use("/api/supplier/", SuppliersRoutes);
 app.use(express.json()); // para entender json
 
 

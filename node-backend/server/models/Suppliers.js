@@ -11,4 +11,4 @@ const suppliersSchema = mongoose.Schema({
   email: String,
 });
 
-module.exports = mongoose.model("Supplier", suppliersSchema);
+module.exports = mongoose.model("Suppliers", suppliersSchema);
