@@ -1,13 +1,11 @@
 // Inicialización
 const mongoose = require("mongoose");  // mongoose para mongodb
-const app = require("./app");
+const express = require("express");    // Utilizamos express
+const app = express();
 
 
 app.use(express.json()); // para entender json
 
-app.use('/api/user', require('./routes/User'));
-app.use('/api/rol', require('./routes/Rol'));   // donde coge las rutas estaaaaa
-// Configuracion
 
 mongoose
     .connect(
